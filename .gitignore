@@ -1,0 +1,7 @@
+.svn/
+.tmp/
+build/
+dist/
+node_modules/
+npm-debug.*
+

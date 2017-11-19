@@ -1,0 +1,21 @@
+// bootstrap-sass
+@import '~animate.css/animate.css';
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+// Common Functions
+@import "./_functions";
+// App Theme
+@import "./_theme";
+
+html {
+    font-size: 62.5%; // 10px
+}
+
+body {
+    font-size: 1.4rem; // 14px
+}
+
+h1 {
+    font-size: 2.4rem; // 24px
+}
