@@ -9,6 +9,7 @@ import { MyUtil}  from "./libs/MyUtil";
 
 import { NavbarComponent } from './components/navbar/navbar';
 import { HomeComponent } from './components/home/home';
+import { SpeakSynthesisComponent } from './components/speak-synthesis/speak-synthesis';
 import { AboutComponent } from './components/about/about';
 
 // Stylesheets
@@ -23,6 +24,7 @@ Vue.use(VeeValidator);
 let router = new VueRouter({
   routes: [
     { name: 'home', path: '/', component: HomeComponent},
+    { name: 'speak-synthesis', path: '/speak-synthesis', component: SpeakSynthesisComponent },
     { name: 'about', path: '/about', component: AboutComponent },
   ]
 });

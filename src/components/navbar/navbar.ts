@@ -13,6 +13,10 @@ export class NavbarComponent extends Vue {
       name: 'Home'
     },
     {
+      path: '/speak-synthesis',
+      name: 'Speak Synthesis'
+    },
+    {
       path: '/about',
       name: 'About'
     }

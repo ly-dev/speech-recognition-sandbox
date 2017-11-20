@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="content col-md-4">
+      <h1>Speech synthesiser</h1>
+
+      <p>Enter some text in the input below and press return or the "play" button to hear it. change voices using the dropdown menu.</p>
+      <form v-on:submit.prevent="process('speak')">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group" v-bind:class="{'has-error': errors.has('txt') }">
+              <label class="control-label" for="txt">Sentence</label>
+              <input v-model="pageData.txt" v-validate="{ rules: { required: true } }" class="form-control" type="text" name="txt" placeholder="Sentence to speak ...">
+              <p class="text-danger" v-if="errors.has('txt')">{{ errors.first('txt') }}</p>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group" v-bind:class="{'has-error': errors.has('voice') }">
+              <label class="control-label" for="voice">voice</label>
+              <select v-model="pageData.voiceIndex" v-validate="{ rules: { required: true} }" class="form-control" name="voice">
+                  <option v-for="(item, index) in pageData.voices" v-bind:value="index">{{ item.name }} ({{ item.lang }})</option>
+                </select>
+              <p class="text-danger" v-if="errors.has('voice')">{{ errors.first('voice') }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <p class="text-danger" v-if="pageData.submitError">{{ pageData.submitError }}</p>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Speak Out</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -26,6 +26,7 @@
     "@types/lodash": "^4.14.61",
     "@types/mustache": "^0.8.29",
     "@types/node": "^7.0.12",
+    "@types/webspeechapi": "0.0.28",
     "clean-webpack-plugin": "^0.1.16",
     "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^4.0.0",
